@@ -1,0 +1,20 @@
+
+            h1 {color: #6A3E62;
+            text-align: center;
+            font-size: 5em;
+            font-family: serif;
+            margin: 200px;
+            text-decoration: line-through;
+            background-color: #5E7CAC}
+            h1:hover {
+                background-color: #D67C82;
+            }
+            .quote {font-family : monospace;}
+            #leftnav {background-color: #D67C82;
+                padding: 20px;
+            margin: 20px;
+            border: 1px solid #1C2339;
+            border-radius: 20px}
+            td, th, table{border: 2px solid #1C2339;
+            border-collapse: collapse;}
+            header{font-size: 2em;}
