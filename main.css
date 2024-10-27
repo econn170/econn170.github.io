@@ -1,0 +1,137 @@
+:root {
+    --baby-powder: #fdfef9ff;
+    --honolulu-blue: #1174b4ff;
+    --dark-spring-green: #2a7154ff;
+    --amaranth-pink: #f49fc4ff;
+    --mauve: #cfb7efff;
+}
+
+.flex-container {
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: center; 
+    padding: 20px; 
+}
+
+.flex-container div {
+    flex: 0 1 calc(25% - 16px); 
+    box-sizing: border-box; 
+}
+
+.flex-container img {
+    max-width: 100%; 
+    height: auto; 
+    border-radius: 8px; 
+}
+
+.image-container {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%; 
+}
+
+.image-container img {
+    max-width: 100%; 
+    height: auto; 
+    width: 40%; /* Adjust this percentage to make the image smaller */
+}
+
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--baby-powder);
+    color: var(--dark-spring-green);
+    margin: 0;
+    padding: 20px;
+    text-align: center;
+}
+
+nav {
+    background-color: var(--honolulu-blue);
+    padding: 10px;
+}
+
+nav a {
+    color: var(--baby-powder);
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+h1 {
+    color: var(--dark-spring-green);
+    font-size: 2.5em;
+}
+
+h2 {
+    color: var(--amaranth-pink);
+    font-size: 1.5em;
+}
+
+.centered-table {
+    margin: 20px auto;
+    border-collapse: collapse;
+    width: 80%;
+}
+
+.centered-table th,
+.centered-table td {
+    border: 2px solid var(--dark-spring-green);
+    padding: 10px;
+    text-align: center;
+    background-color: var(--mauve);
+}
+
+.centered-table th {
+    background-color: var(--honolulu-blue);
+    color: var(--baby-powder);
+}
+
+#footer {
+    margin-top: 40px;
+    padding: 20px;
+    background-color: var(--dark-spring-green);
+    color: var(--baby-powder);
+}
+
+#footer a {
+    color: var(--baby-powder);
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+#footer a:hover {
+    text-decoration: underline;
+}
+
+
+.recommendations {
+    text-align: left;
+    max-width: 800px; 
+    margin: 20px auto;
+    padding: 10px;
+    background-color: var(--mauve);
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.recommendations ul {
+    list-style-type: none; 
+    padding: 0;
+}
+
+.recommendations li {
+    margin: 15px 0;
+    padding: 10px;
+}
+
+.recommendations iframe {
+    width: 100%; 
+    border-radius: 12px;
+    margin-top: 10px;
+}
