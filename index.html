@@ -1,58 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>hi, i'm ellie</title>
+        <title>ellie connors</title>
         <meta charset="UTF-8">
-        <meta name="description" content="A website all about Ellie Virginia Connors">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="ellie connors — librarian, researcher, and artist">
         <link rel="stylesheet" href="main.css">
-        <link rel="icon" type="image/x-icon" href="download-2-removebg-preview.png?">
+        <link rel="icon" type="image/x-icon" href="download-2-removebg-preview.png">
     </head>
     <body>
+
         <nav>
-            <a href=index.html>hi i'm ellie</a>
-            <a href=who_am_i.html>who am i</a>
-            <a href=art.html>art</a>
-            <a href=recommended_reading.html>recommended reading</a>
+            <a class="nav-name" href="index.html">ellie connors</a> is a librarian, researcher, and artist.
+            <a href="who_am_i.html">about</a>,
+            <span class="nav-dropdown">
+                <a href="projects.html">projects</a>
+                <div class="dropdown-menu">
+                    <a href="projects.html#foundations">reassessing the art reference collection</a>
+                    <a href="projects.html#research">the normalization of unease</a>
+                    <a href="projects.html#user-centered">cult, camp, & coming of age</a>
+                    <a href="projects.html#ethical">machine divinity</a>
+                    <a href="projects.html#technology">odd collage</a>
+                </div>
+            </span>,
+            <a href="art.html">art</a>,
+            <a href="recommended_reading.html">reading</a>,
+            <a href="Ellie_Connors_Resume.pdf">cv</a>.
         </nav>
 
-        <h1>hi, i'm ellie</h1>
-        <h2>collector and creator</h2>
-        <div class="image-container">
-        <img alt="Picture of Ellie laughing" src="elliepicture.png">
-    </div>
-<table class="centered-table">
-    <tr>
-        <th>
-        welcome
-        </th>
-        <th>
-        to
-        </th>
-        <th>
-        my world!</th>
-    </tr>
-    <tr>
-        <td><img alt="Collection of cards and prints" src="collection.png" width="300" 
-     height="300"></td>
-        <td><img alt="Mirror picture of Ellie and Parnia" src="mirror.png" width="300" 
-     height="300"></td>
-        <td><img alt="Photobooth pictures of Ellie and Hannah" src="photofilm.png" width="300" 
-     height="300"></td>
-    </tr>    
-    <tr>
-        <td><img alt="Picture of Rosa and Caspar walking" src="besties.png" width="300" 
-     height="300"></td>
-        <td><img alt="Picture of Ellie's things she's packing" src="cowgirl.png" width="300" 
-     height="300"></td>
-        <td><img alt="Ellie Caspar Rosa and Toby at the lake" src="lake.png" width="300" 
-     height="300"></td>
-    </tr>
-    </table>
-            
-<footer id='footer'>
-  <p><a href="mailto:econn170@pratt.edu">email me</a></p>
-            <p><a href="https://www.linkedin.com/in/ellie-connors-88332b191/">linkedin</a></p>
-            <p><a href="Ellie_Connors_Resume.pdf">resume</a></p>
-              <p>©ellie connors, 2024</p>
-            
-</footer>
+        <div class="home-grid">
+            <div class="home-left">
+                <h1>ellie<br>connors</h1>
+                <p class="bio">librarian, researcher, and artist at the intersection of digital archives, knowledge organization, and participatory art education. based in new york.</p>
+            </div>
+            <div class="home-right">
+                <div class="photo-cell"><img alt="collection of cards and prints" src="collection.png"></div>
+                <div class="photo-cell"><img alt="mirror picture of ellie and parnia" src="mirror.png"></div>
+                <div class="photo-cell"><img alt="photobooth pictures" src="photofilm.png"></div>
+                <div class="photo-cell"><img alt="ellie at the lake" src="lake.png"></div>
+            </div>
+        </div>
+
+        <footer>
+            <div class="footer-links">
+                <a href="mailto:econn170@pratt.edu">email</a>
+                <a href="https://www.linkedin.com/in/ellie-connors-88332b191/">linkedin</a>
+                <a href="Ellie_Connors_Resume.pdf">cv</a>
+            </div>
+            <span class="copyright">©ellie connors, 2026</span>
+        </footer>
+
+    </body>
+</html>
