@@ -14,22 +14,20 @@
             .color-2 { background: #F08247; }
             .color-3 { background: #A87280; }
             .color-4 { background: #5B889F; }
-            .color-5 { background: #FFF9C0; }
+            .color-5 { background: #5C6B3A; }
+            .color-blank { background: #FFF9C0; }
 
-            /* lemon chiffon card needs dark text */
-            .project-card:nth-child(5) .project-card-num,
-            .project-card:nth-child(5) .project-card-title,
-            .project-card:nth-child(5) .project-card-tag {
-                color: rgba(30,20,15,0.75);
+            /* all card text white */
+            .project-card .project-card-num,
+            .project-card .project-card-title,
+            .project-card .project-card-tag {
+                color: rgba(255,255,255,0.92);
             }
 
-            /* override the white gradient on colored cards */
+            /* no gradient, no shadow on overlay */
             .project-card .project-card-overlay {
-                background: linear-gradient(transparent, rgba(0,0,0,0.35));
-            }
-
-            .project-card:nth-child(5) .project-card-overlay {
-                background: linear-gradient(transparent, rgba(255,249,192,0.85));
+                background: none;
+                box-shadow: none;
             }
 
             /* supporting material blocks */
@@ -158,6 +156,9 @@
                     <p class="project-card-tag">technology · ux design</p>
                 </div>
             </a>
+            <div class="project-card" style="pointer-events:none;">
+                <div class="project-card-placeholder color-blank"></div>
+            </div>
         </div>
 
         <!-- index list -->
