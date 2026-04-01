@@ -8,6 +8,30 @@
         <link rel="stylesheet" href="main.css">
         <link rel="icon" type="image/x-icon" href="download-2-removebg-preview.png">
         <style>
+            /* project card colors */
+            .project-card-placeholder { width: 100%; height: 100%; }
+            .color-1 { background: #A70E39; }
+            .color-2 { background: #F08247; }
+            .color-3 { background: #A87280; }
+            .color-4 { background: #5B889F; }
+            .color-5 { background: #FFF9C0; }
+
+            /* lemon chiffon card needs dark text */
+            .project-card:nth-child(5) .project-card-num,
+            .project-card:nth-child(5) .project-card-title,
+            .project-card:nth-child(5) .project-card-tag {
+                color: rgba(30,20,15,0.75);
+            }
+
+            /* override the white gradient on colored cards */
+            .project-card .project-card-overlay {
+                background: linear-gradient(transparent, rgba(0,0,0,0.35));
+            }
+
+            .project-card:nth-child(5) .project-card-overlay {
+                background: linear-gradient(transparent, rgba(255,249,192,0.85));
+            }
+
             /* supporting material blocks */
             .project-materials {
                 margin-top: 40px;
@@ -85,7 +109,7 @@
             </span>,
             <a href="art.html">art</a>,
             <a href="recommended_reading.html">reading</a>,
-            <a href="Ellie Connors Resume.pdf">cv</a>.
+            <a href="Ellie_Connors_Resume.pdf">cv</a>.
         </nav>
 
         <div class="page-header">
@@ -95,7 +119,7 @@
         <!-- visual grid -->
         <div class="projects-grid">
             <a class="project-card" href="#foundations">
-                <div class="project-card-placeholder"></div>
+                <div class="project-card-placeholder color-1"></div>
                 <div class="project-card-overlay">
                     <p class="project-card-num">01</p>
                     <p class="project-card-title">reassessing the art reference collection in the digital age</p>
@@ -103,7 +127,7 @@
                 </div>
             </a>
             <a class="project-card" href="#research">
-                <div class="project-card-placeholder"></div>
+                <div class="project-card-placeholder color-2"></div>
                 <div class="project-card-overlay">
                     <p class="project-card-num">02</p>
                     <p class="project-card-title">the normalization of unease</p>
@@ -111,7 +135,7 @@
                 </div>
             </a>
             <a class="project-card" href="#user-centered">
-                <div class="project-card-placeholder"></div>
+                <div class="project-card-placeholder color-3"></div>
                 <div class="project-card-overlay">
                     <p class="project-card-num">03</p>
                     <p class="project-card-title">cult, camp, & coming of age</p>
@@ -119,7 +143,7 @@
                 </div>
             </a>
             <a class="project-card" href="#ethical">
-                <div class="project-card-placeholder"></div>
+                <div class="project-card-placeholder color-4"></div>
                 <div class="project-card-overlay">
                     <p class="project-card-num">04</p>
                     <p class="project-card-title">machine divinity</p>
@@ -127,7 +151,7 @@
                 </div>
             </a>
             <a class="project-card" href="#technology">
-                <div class="project-card-placeholder"></div>
+                <div class="project-card-placeholder color-5"></div>
                 <div class="project-card-overlay">
                     <p class="project-card-num">05</p>
                     <p class="project-card-title">odd collage</p>
@@ -360,12 +384,8 @@
 
         <footer>
             <div class="footer-links">
-                <a href="mailto:econn170@pratt.edu">email</a>
+                <a href="/cdn-cgi/l/email-protection#84e1e7ebeaeab5b3b4c4f4f6e5f0f0aae1e0f1">email</a>
                 <a href="https://www.linkedin.com/in/ellie-connors-88332b191/">linkedin</a>
-                <a href="Ellie Connors Resume.pdf">cv</a>
+                <a href="Ellie_Connors_Resume.pdf">cv</a>
             </div>
-            <span class="copyright">©ellie connors, 2026</span>
-        </footer>
-
-    </body>
-</html>
+            <span class="copyright">©ellie connors, 2026</span
