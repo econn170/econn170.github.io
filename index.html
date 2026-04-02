@@ -8,6 +8,9 @@
         <link rel="stylesheet" href="main.css">
         <link rel="icon" type="image/x-icon" href="download-2-removebg-preview.png">
         <style>
+
+            /* ── DESKTOP: full collage layout ── */
+
             .home-wrapper {
                 position: relative;
                 min-height: 88vh;
@@ -62,9 +65,6 @@
                 filter: grayscale(0%);
             }
 
-            /* ── photo placements ── */
-
-            /* portrait of ellie — prominent center-left */
             .photo-1 {
                 width: clamp(160px, 20vw, 260px);
                 aspect-ratio: 3/4;
@@ -73,7 +73,6 @@
                 z-index: 4;
             }
 
-            /* ephemera/collection — overlaps ellie, to the right and down */
             .photo-2 {
                 width: clamp(150px, 19vw, 250px);
                 aspect-ratio: 1/1;
@@ -82,7 +81,6 @@
                 z-index: 5;
             }
 
-            /* wide landscape — top right */
             .photo-3 {
                 width: clamp(200px, 26vw, 360px);
                 aspect-ratio: 3/2;
@@ -91,7 +89,6 @@
                 z-index: 3;
             }
 
-            /* portrait — right side, below photo-3 */
             .photo-4 {
                 width: clamp(140px, 18vw, 240px);
                 aspect-ratio: 4/3;
@@ -100,7 +97,6 @@
                 z-index: 4;
             }
 
-            /* landscape — bottom center, bleeds off edge */
             .photo-5 {
                 width: clamp(180px, 22vw, 300px);
                 aspect-ratio: 4/3;
@@ -114,18 +110,95 @@
                 min-height: 600px;
             }
 
+            /* mobile scroll strip — hidden on desktop */
+            .mobile-hero { display: none; }
+            .mobile-scroll { display: none; }
+            .mobile-bio { display: none; }
+
+            /* ── MOBILE: hero + scroll strip ── */
+
             @media (max-width: 768px) {
-                .home-name { top: 20px; left: 20px; }
-                .home-bio { left: 20px; bottom: 24px; max-width: 180px; font-size: 0.7rem; }
 
-                .photo-1 { width: 36vw; top: 44px;  left: 40%; }
-                .photo-2 { width: 34vw; top: 160px; left: 54%; }
-                .photo-3 { width: 44vw; top: 28px;  right: 0; }
-                .photo-4 { width: 34vw; top: 230px; right: 0; }
-                .photo-5 { width: 40vw; bottom: 10px; left: 38%; }
+                /* hide the absolute collage entirely */
+                .home-wrapper { display: none; }
 
-                .home-spacer { height: 95vw; min-height: 400px; }
+                /* show mobile layout */
+                .mobile-hero {
+                    display: block;
+                    position: relative;
+                    width: 100%;
+                    aspect-ratio: 3/4;
+                    overflow: hidden;
+                    background: #ebebeb;
+                }
+
+                .mobile-hero img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    display: block;
+                    filter: grayscale(8%);
+                }
+
+                .mobile-hero-overlay {
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    right: 0;
+                    padding: 20px 20px 24px;
+                    background: linear-gradient(transparent, rgba(255,255,255,0.92));
+                }
+
+                .mobile-hero-overlay h1 {
+                    font-family: 'Times New Roman', Times, serif;
+                    font-size: clamp(2.8rem, 14vw, 5rem);
+                    font-weight: 400;
+                    line-height: 0.95;
+                    letter-spacing: -0.02em;
+                    color: #111;
+                }
+
+                .mobile-scroll {
+                    display: flex;
+                    gap: 2px;
+                    background: #e0e0e0;
+                    overflow-x: auto;
+                    -webkit-overflow-scrolling: touch;
+                    scrollbar-width: none;
+                }
+
+                .mobile-scroll::-webkit-scrollbar {
+                    display: none;
+                }
+
+                .mobile-scroll-cell {
+                    flex: 0 0 52vw;
+                    aspect-ratio: 1;
+                    overflow: hidden;
+                    background: #ebebeb;
+                }
+
+                .mobile-scroll-cell img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    display: block;
+                    filter: grayscale(8%);
+                }
+
+                .mobile-bio {
+                    display: block;
+                    padding: 20px 20px 40px;
+                    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+                    font-weight: 300;
+                    font-size: 0.78rem;
+                    line-height: 1.8;
+                    color: #888;
+                }
+
+                footer { margin-top: 0; }
             }
+
         </style>
     </head>
     <body>
@@ -148,37 +221,57 @@
             <a href="Ellie Connors Resume.pdf">cv</a>.
         </nav>
 
+        <!-- ── DESKTOP collage ── -->
         <div class="home-wrapper">
-
             <div class="home-name">
                 <h1>ellie<br>connors</h1>
             </div>
-
             <div class="collage-photo photo-1">
                 <img alt="ellie connors" src="ellie.png">
             </div>
-
             <div class="collage-photo photo-2">
                 <img alt="collection of ephemera" src="collection.png">
             </div>
-
             <div class="collage-photo photo-3">
                 <img alt="cards and prints" src="cards.png">
             </div>
-
             <div class="collage-photo photo-4">
                 <img alt="friends" src="gallery.png">
             </div>
-
             <div class="collage-photo photo-5">
                 <img alt="yoana candles" src="candles.png">
             </div>
-
             <div class="home-bio">
                 librarian, researcher, artist, humanist.
             </div>
-
             <div class="home-spacer"></div>
+        </div>
+
+        <!-- ── MOBILE layout ── -->
+        <div class="mobile-hero">
+            <img alt="ellie connors" src="ellie.png">
+            <div class="mobile-hero-overlay">
+                <h1>ellie<br>connors</h1>
+            </div>
+        </div>
+
+        <div class="mobile-scroll">
+            <div class="mobile-scroll-cell">
+                <img alt="collection of ephemera" src="collection.png">
+            </div>
+            <div class="mobile-scroll-cell">
+                <img alt="cards and prints" src="cards.png">
+            </div>
+            <div class="mobile-scroll-cell">
+                <img alt="friends" src="gallery.png">
+            </div>
+            <div class="mobile-scroll-cell">
+                <img alt="yoana candles" src="candles.png">
+            </div>
+        </div>
+
+        <div class="mobile-bio">
+            librarian, researcher, artist, humanist.
         </div>
 
         <footer>
